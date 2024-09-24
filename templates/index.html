@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+
+<body>
+    <h1>Contact Manager</h1>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+        <input type="submit" value="Add Contact">
+    </form>
+    <br>
+    <br>
+
+    <table id="contact-table">
+        <thead>
+            <tr>
+                <th>Sr.No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="contact-list">
+            <!-- contacts will be displayed here -->
+        </tbody>
+    </table>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
