@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
@@ -27,6 +27,12 @@ class Contact(db.Model):
 
 with app.app_context():
     db.create_all()
+
+
+# Defautl route for Index.html
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 
 @app.route('/contacts', methods=['POST'])
