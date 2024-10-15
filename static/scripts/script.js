@@ -53,6 +53,13 @@ function updateContact(id) {
     contact.name = prompt('Enter new name:');
     contact.email = prompt('Enter new email:');
     contact.phone = prompt('Enter new phone:');
+
+    // Check if any of the contact fields are empty
+    if (!contact.name || !contact.email || !contact.phone) {
+        alert('Please fill in all contact fields!');
+        return;
+    }
+
     fetch(`${apiUrl}/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
